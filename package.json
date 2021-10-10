@@ -1,0 +1,43 @@
+{
+  "name": "archi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev:server": "nodemon",
+    "lint": "eslint . --fix",
+    "dev:assets": "webpack"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.15.7",
+    "@babel/core": "^7.15.8",
+    "@babel/node": "^7.15.8",
+    "@babel/preset-env": "^7.15.8",
+    "css-loader": "^6.4.0",
+    "eslint": "^8.0.0",
+    "nodemon": "^2.0.13",
+    "sass": "^1.42.1",
+    "sass-loader": "^12.1.0",
+    "style-loader": "^3.3.0",
+    "webpack": "^5.58.1",
+    "webpack-cli": "^4.9.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "babel-loader": "^8.2.2"
+  },
+  "dependencies": {
+    "core-js": "^3.18.2",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "mini-css-extract-plugin": "^2.4.2",
+    "mongoose": "^6.0.10",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.3",
+    "node-sass": "^6.0.1",
+    "prettier": "^2.4.1"
+  }
+}
