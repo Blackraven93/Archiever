@@ -1,6 +1,7 @@
 // external module
 import express from "express";
 import morgan from "morgan";
+import rootRouter from "./routers/rootRouter"
 import session from "express-session";
 // Other module import
 
@@ -25,6 +26,9 @@ app.use(express.json());
 // static
 app.use("/static", express.static("assets"));
 app.use("/uploads", express.static("uploads"));
+
 // Router
+app.use('/', rootRouter);
+
 
 export default app;
