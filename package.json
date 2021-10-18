@@ -2,7 +2,6 @@
   "name": "archi",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "dev:server": "nodemon",
     "lint": "eslint . --fix",
@@ -16,17 +15,18 @@
     "@babel/core": "^7.15.8",
     "@babel/node": "^7.15.8",
     "@babel/preset-env": "^7.15.8",
+    "babel-loader": "^8.2.2",
     "css-loader": "^6.4.0",
     "eslint": "^8.0.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
     "nodemon": "^2.0.13",
     "sass": "^1.42.1",
     "sass-loader": "^12.1.0",
     "style-loader": "^3.3.0",
     "webpack": "^5.58.1",
     "webpack-cli": "^4.9.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-prettier": "^4.0.0",
-    "babel-loader": "^8.2.2"
+    "webpack-dev-server": "^4.3.1"
   },
   "dependencies": {
     "core-js": "^3.18.2",
