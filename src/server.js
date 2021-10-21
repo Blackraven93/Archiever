@@ -1,14 +1,23 @@
+/* eslint-disable no-undef */
 // external module
 import express from "express";
 import morgan from "morgan";
-import rootRouter from "./routers/rootRouter"
-import session from "express-session";
+import rootRouter from "./routers/rootRouter";
+import joinRouter from "./routers/joinRouter";
+import userRouter from "./routers/userRouter";
+import videoRouter from "./routers/videoRouter";
+
 // Other module import
 
 const app = express();
 const logger = morgan("dev");
 
-app.set("views", process.cwd() + "/src/views");
+app.set("views", [
+  process.cwd() + "/src/views/root",
+  process.cwd() + "/src/views/join",
+  process.cwd() + "/src/views/users",
+  process.cwd() + "/src/views/videos",
+]);
 app.set("view engine", "pug");
 
 // Middleware
@@ -28,7 +37,9 @@ app.use("/static", express.static("assets"));
 app.use("/uploads", express.static("uploads"));
 
 // Router
-app.use('/', rootRouter);
-
+app.use("/", rootRouter);
+app.use("/join", joinRouter);
+app.use("/users", userRouter);
+app.use("/videos", videoRouter);
 
 export default app;

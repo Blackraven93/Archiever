@@ -1,6 +1,10 @@
 import app from "./server";
+import dotenv from "dotenv";
+// Other module import
 
-const PORT = 4000;
+dotenv.config();
+
+const PORT = process.env.PORT;
 
 const handleListening = () =>
   console.log(`✅ Server listenting on port ${PORT} 🚀`);
