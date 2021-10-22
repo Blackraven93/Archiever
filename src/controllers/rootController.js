@@ -1,8 +1,12 @@
+import Video from "../models/Video"
+
+
 export const home = (req, res) => {
   return res.render("home", { pageTitle: "Home" });
 };
 
 export const search = (req, res) => {
+  Video.findById({}, (error, videos) => { })
   return res.render("search", { pageTitle: "Search" });
 };
 

@@ -1,4 +1,23 @@
 extends ../partials/layout
 
 block content 
-    h1 Video upload
+    form(method="post") 
+        input(type="text", name="title", placholder="title")
+        textarea(name="description", cols="30", rows="10") 
+        input(type="text")
+        div 
+            input(type="text", name="categories", placholder="title")
+            button(type="submit") 추가
+        input(type="text", name="title", placholder="title")
+
+
+
+title: String,
+    description: String,
+    createdAt: { type: Date, default: Date.now },
+    categories: [{ type: String }],
+    tags: [{ type: String }],
+    meta: {
+        views: Number,
+        likes: Number,
+        sharedCount: Number
