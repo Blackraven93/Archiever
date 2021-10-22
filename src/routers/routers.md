@@ -4,13 +4,13 @@
 - Home(홈) -> /
 - search(검색) -> /search
 - interview(인터뷰) -> /interview
-- Q&A(문의) -> /faq (문의하기 따로 만들 것 https://playentry.org/faq)
+- F&Q(문의) -> /faq (문의하기 따로 만들 것 https://playentry.org/faq)
 - login(로그인) -> /login
 
 ## Join
 - join(회원가입) -> /join
 - 이용약관 -> /join/...
-- 개인정보 -> /join/...
+- 개인정보 -> /join/privacy
 - 마케팅 -> /join/...
 
 ## Users

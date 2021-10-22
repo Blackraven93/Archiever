@@ -1,9 +1,14 @@
+import Video from "../models/Video"
+
+
 export const home = (req, res) => {
   return res.render("home", { pageTitle: "Home" });
 };
 
-export const search = (req, res) => {
-  return res.render("search", { pageTitle: "Search" });
+export const search = async (req, res) => {
+  const videos = await Video.find({});
+  console.log(videos)
+  return res.render("search", { pageTitle: "Search", videos });
 };
 
 export const interview = (req, res) => {

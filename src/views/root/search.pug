@@ -1,4 +1,7 @@
 extends ../partials/layout
+include ../mixins/video
+
 
 block content 
-    h1 Search
+    each video in videos
+        +video(video)

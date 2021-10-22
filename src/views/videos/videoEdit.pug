@@ -1,4 +1,18 @@
 extends ../partials/layout
 
 block content 
-    h1 Video Edit
+    if errorMessage 
+        span=errorMessage 
+    h2 Video Edit
+    main.video__upload__form__card 
+        form(method="post")
+            input(type="text", name="title", placeholder="title" value=video.title)
+            textarea(name="description", cols="30", rows="10" )=video.description
+            input(type="text", name="categories", placeholder="categories" value=video.categories).video__categories
+            button(type="submit").video__categories__btn 추가
+            div.video__categories__box 
+            input(type="text", name="tags", placeholder="tags" value=video.tags).video__tags
+            button(type="submit").video__tags__btn 추가
+            div.video__tags__box
+            button(type="submit") 업로드
+    script(src="/static/js/videoUpload.js") 
