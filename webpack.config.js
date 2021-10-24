@@ -7,6 +7,7 @@ const BASE_JS = "./src/client/js/";
 module.exports = {
   entry: {
     main: BASE_JS + "main.js",
+    videoUpload: BASE_JS + "videoUpload.js",
   },
   mode: "development",
   watch: true,

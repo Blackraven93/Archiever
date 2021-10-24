@@ -10,10 +10,10 @@ import {
 
 const userRouter = express.Router();
 
-userRouter.get("/:id", profile);
-userRouter.route("/:id/edit").get(getUserEdit).post(postUserEdit);
-userRouter.route("/:id/delete").get(getUserDelete).post(postUserDelete);
-userRouter.get("/:id/archive", archive);
+userRouter.get("/:id([0-9a-f]{24})", profile);
+userRouter.route("/:id([0-9a-f]{24})/edit").get(getUserEdit).post(postUserEdit);
+userRouter.route("/:id([0-9a-f]{24})/delete").get(getUserDelete).post(postUserDelete);
+userRouter.get("/:id([0-9a-f]{24})/archive", archive);
 
 export default userRouter;
 

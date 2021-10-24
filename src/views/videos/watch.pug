@@ -1,4 +1,6 @@
 extends ../partials/layout
 
 block content 
-    h1 Watch
+    h1=video.title
+    p=video.description
+    a(href=`/videos/${video.id}/edit`) Edit
